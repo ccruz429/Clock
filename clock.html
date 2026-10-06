@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+</head>
+<style>
+.clock-container{
+    margin-top: 400px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+.clock {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: blueviolet;
+    letter-spacing: 2px;
+}
+
+.colon {
+    color: #00adb5;
+    animation: blink 1s infinite;
+}
+
+#ampm {
+    font-size: 1.5rem;
+    color: #00adb5;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+body{
+    background-color: gray;
+}
+/* Adds a subtle ticking indicator animation to the colons */
+@keyframes blink {
+    50% { opacity: 0.3; }
+}</style>
+<body>
+    <center>
+    <div class="clock-container">
+        <div class="clock">
+            <span id="hours">00</span>
+            <span class="colon">:</span>
+            <span id="minutes">00</span>
+            <span class="colon">:</span>
+            <span id="seconds">00</span>
+        </div>
+        <div id="ampm">AM</div>
+    </div>
+    </center>
+<script src="script.js"></script>
+</body>
+</html>
